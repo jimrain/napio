@@ -1,0 +1,5 @@
+/bin
+/pkg
+/.idea
+/migrations
+**/*.rs.bk
