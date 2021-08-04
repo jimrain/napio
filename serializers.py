@@ -3,15 +3,11 @@ from napio.models import AlbumInfo, ArtistInfo, PlaylistInfo
 
 
 class AlbumInfoSerializer(serializers.ModelSerializer):
-    # playlist = PlaylistInfoSerializer(many=True, read_only=True)
-    # playlist = serializers.StringRelatedField(many=True)
     class Meta:
         model = AlbumInfo
         fields = ['name', 'url']
 
 class ArtistInfoSerializer(serializers.ModelSerializer):
-    # playlist = PlaylistInfoSerializer(many=True, read_only=True)
-    # playlist = serializers.StringRelatedField(many=True)
     class Meta:
         model = ArtistInfo
         fields = ['name', 'url']
