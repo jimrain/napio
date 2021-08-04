@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from napio.models import ArtistInfo, AlbumInfo, PlaylistInfo
 from napio.serializers import ArtistInfoSerializer, AlbumInfoSerializer, PlaylistInfoSerializer
 
+
 @csrf_exempt
 def artist_info_detail(request, name):
     try:
@@ -15,6 +16,7 @@ def artist_info_detail(request, name):
     if request.method == 'GET':
         serializer = ArtistInfoSerializer(info)
         return JsonResponse(serializer.data)
+
 
 @csrf_exempt
 def album_info_detail(request, name):
