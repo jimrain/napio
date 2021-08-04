@@ -1,0 +1,6 @@
+/bin
+/pkg
+/.idea
+/migrations
+/__pycache__
+**/*.rs.bk
