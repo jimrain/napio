@@ -10,7 +10,7 @@ class PlaylistInfo(models.Model):
 
 class ArtistInfo(models.Model):
     name = models.CharField(max_length=32, default="")
-    url = models.URLField(max_length=200)
+    url = models.CharField(max_length=200)
     playlist = models.ManyToManyField(PlaylistInfo, related_name='artists')
 
     def __str__(self):
@@ -19,7 +19,7 @@ class ArtistInfo(models.Model):
 
 class AlbumInfo(models.Model):
     name = models.CharField(max_length=32, default="")
-    url = models.URLField(max_length=200)
+    url = models.CharField(max_length=200)
     playlist = models.ManyToManyField(PlaylistInfo, related_name='albums')
 
     def __str__(self):
